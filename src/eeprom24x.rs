@@ -342,7 +342,8 @@ impl_for_page_size!(
     B64,
     64,
     ["24x128", "AT24C128", 14, No, new_24x128],
-    ["24x256", "AT24C256", 15, No, new_24x256]
+    ["24x256", "AT24C256", 15, No, new_24x256],
+    ["M24256", "M24256", 15, Yes, new_m24256]
 );
 impl_for_page_size!(
     TwoBytes,

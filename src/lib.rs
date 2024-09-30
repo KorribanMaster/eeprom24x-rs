@@ -36,23 +36,24 @@
 //! 2-wire bus. The devices are optimized for use in many industrial and commercial
 //! applications where low power and low voltage operation are essential.
 //!
-//! | Device | Memory bits | 8-bit words | Page size | Datasheet  |
-//! |-------:|------------:|------------:|----------:|:-----------|
-//! |  24x00 |    128 bits |          16 |       N/A | [24C00]    |
-//! |  24x01 |      1 Kbit |         128 |   8 bytes | [AT24C01]  |
-//! | M24x01 |      1 Kbit |         128 |  16 bytes | [M24C01]   |
-//! |  24x02 |      2 Kbit |         256 |   8 bytes | [AT24C02]  |
-//! | M24x02 |      2 Kbit |         256 |  16 bytes | [M24C02]   |
-//! |  24x04 |      4 Kbit |         512 |  16 bytes | [AT24C04]  |
-//! |  24x08 |      8 Kbit |       1,024 |  16 bytes | [AT24C08]  |
-//! |  24x16 |     16 Kbit |       2,048 |  16 bytes | [AT24C16]  |
-//! |  24x32 |     32 Kbit |       4,096 |  32 bytes | [AT24C32]  |
-//! |  24x64 |     64 Kbit |       8,192 |  32 bytes | [AT24C64]  |
-//! | 24x128 |    128 Kbit |      16,384 |  64 bytes | [AT24C128] |
-//! | 24x256 |    256 Kbit |      32,768 |  64 bytes | [AT24C256] |
-//! | 24x512 |    512 Kbit |      65,536 | 128 bytes | [AT24C512] |
-//! | 24xM01 |      1 Mbit |     131,072 | 256 bytes | [AT24CM01] |
-//! | 24xM02 |      2 Mbit |     262,144 | 256 bytes | [AT24CM02] |
+//! | Device   | Memory bits | 8-bit words | Page size | Datasheet  |
+//! |---------:|------------:|------------:|----------:|:-----------|
+//! |  24x00   |    128 bits |          16 |       N/A | [24C00]    |
+//! |  24x01   |      1 Kbit |         128 |   8 bytes | [AT24C01]  |
+//! | M24x01   |      1 Kbit |         128 |  16 bytes | [M24C01]   |
+//! |  24x02   |      2 Kbit |         256 |   8 bytes | [AT24C02]  |
+//! | M24x02   |      2 Kbit |         256 |  16 bytes | [M24C02]   |
+//! |  24x04   |      4 Kbit |         512 |  16 bytes | [AT24C04]  |
+//! |  24x08   |      8 Kbit |       1,024 |  16 bytes | [AT24C08]  |
+//! |  24x16   |     16 Kbit |       2,048 |  16 bytes | [AT24C16]  |
+//! |  24x32   |     32 Kbit |       4,096 |  32 bytes | [AT24C32]  |
+//! |  24x64   |     64 Kbit |       8,192 |  32 bytes | [AT24C64]  |
+//! | 24x128   |    128 Kbit |      16,384 |  64 bytes | [AT24C128] |
+//! | 24x256   |    256 Kbit |      32,768 |  64 bytes | [AT24C256] |
+//! | M24256   |    256 Kbit |      32,768 |  64 bytes | [M24256]   |
+//! | 24x512   |    512 Kbit |      65,536 | 128 bytes | [AT24C512] |
+//! | 24xM01   |      1 Mbit |     131,072 | 256 bytes | [AT24CM01] |
+//! | 24xM02   |      2 Mbit |     262,144 | 256 bytes | [AT24CM02] |
 //!
 //! [24C00]: https://ww1.microchip.com/downloads/en/DeviceDoc/24AA00-24LC00-24C00-Data-Sheet-20001178J.pdf
 //! [AT24C01]: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8871F-SEEPROM-AT24C01D-02D-Datasheet.pdf
@@ -66,6 +67,7 @@
 //! [AT24C64]: https://ww1.microchip.com/downloads/en/devicedoc/doc0336.pdf
 //! [AT24C128]: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8734-SEEPROM-AT24C128C-Datasheet.pdf
 //! [AT24C256]: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8568-SEEPROM-AT24C256C-Datasheet.pdf
+//! [M24256]:   https://www.st.com/resource/en/datasheet/m24256-bw.pdf
 //! [AT24C512]: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8720-SEEPROM-AT24C512C-Datasheet.pdf
 //! [AT24CM01]: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8812-SEEPROM-AT24CM01-Datasheet.pdf
 //! [AT24CM02]: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8828-SEEPROM-AT24CM02-Datasheet.pdf

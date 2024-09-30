@@ -38,6 +38,7 @@ create!(new_24x64, TwoBytes, B32, No);
 create!(new_24csx64, TwoBytes, B32, Yes);
 create!(new_24x128, TwoBytes, B64, No);
 create!(new_24x256, TwoBytes, B64, No);
+create!(new_m24256, TwoBytes, B64, Yes);
 create!(new_24x512, TwoBytes, B128, No);
 create!(new_24xm01, TwoBytes, B256, No);
 create!(new_24xm02, TwoBytes, B256, No);
@@ -66,6 +67,7 @@ macro_rules! for_all_ics {
             $name!(for_24csx64, new_24csx64);
             $name!(for_24x128, new_24x128);
             $name!(for_24x256, new_24x256);
+            $name!(for_m24256, new_m24256);
             $name!(for_24x512, new_24x512);
             $name!(for_24xm01, new_24xm01);
             $name!(for_24xm02, new_24xm02);
@@ -106,6 +108,7 @@ macro_rules! for_all_ics_with_2b_addr {
             $name!(for_24csx64, new_24csx64);
             $name!(for_24x128, new_24x128);
             $name!(for_24x256, new_24x256);
+            $name!(for_m24256, new_m24256);
             $name!(for_24x512, new_24x512);
             $name!(for_24xm01, new_24xm01);
             $name!(for_24xm02, new_24xm02);
@@ -145,6 +148,7 @@ macro_rules! for_all_ics_with_2b_addr_and_page_size {
             $name!(for_24csx64, new_24csx64, 32);
             $name!(for_24x128, new_24x128, 64);
             $name!(for_24x256, new_24x256, 64);
+            $name!(for_m24256, new_m24256, 64);
             $name!(for_24x512, new_24x512, 128);
             $name!(for_24xm01, new_24xm01, 256_usize);
             $name!(for_24xm02, new_24xm02, 256_usize);
@@ -175,6 +179,7 @@ macro_rules! for_all_ics_with_page_size {
             $name!(for_24csx64, new_24csx64, 32);
             $name!(for_24x128, new_24x128, 64);
             $name!(for_24x256, new_24x256, 64);
+            $name!(for_m24256, new_m24256, 64);
             $name!(for_24x512, new_24x512, 128);
             $name!(for_24xm01, new_24xm01, 256);
             $name!(for_24xm02, new_24xm02, 256);
@@ -206,6 +211,8 @@ macro_rules! for_all_ics_with_capacity {
             $name!(for_24csx64, new_24csx64, 1 << 13);
             $name!(for_24x128, new_24x128, 1 << 14);
             $name!(for_24x256, new_24x256, 1 << 15);
+            $name!(for_m24256, new_m24256, 1 << 15); //TODO I don't understand what this bitshift
+                                                     //of 15 is used for
             $name!(for_24x512, new_24x512, 1 << 16);
             $name!(for_24xm01, new_24xm01, 1 << 17);
             $name!(for_24xm02, new_24xm02, 1 << 18);
@@ -236,6 +243,8 @@ macro_rules! for_all_writestorage_ics_with_capacity {
             $name!(for_24csx64, new_24csx64, 1 << 13);
             $name!(for_24x128, new_24x128, 1 << 14);
             $name!(for_24x256, new_24x256, 1 << 15);
+            $name!(for_m24256, new_m24256, 1 << 15); //TODO I don't understand what this bitshift
+                                                     //of 15 is used for
             $name!(for_24x512, new_24x512, 1 << 16);
             $name!(for_24xm01, new_24xm01, 1 << 17);
             $name!(for_24xm02, new_24xm02, 1 << 18);
@@ -264,6 +273,7 @@ macro_rules! for_all_with_serial_with_2b_addr {
             use super::*;
             $name!(for_24csx32, new_24csx32);
             $name!(for_24csx64, new_24csx64);
+            $name!(for_m24256, new_m24256);
         }
     };
 }
